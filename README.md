@@ -124,11 +124,12 @@ Recipe --> IngredientInfo
 ### IngredientInfo
 - getCalories/Protein/Carbs/Fats 
 ```
-
+int output = IngredientInfo instance.clories
+etc...
 ```
 - printValues
 ```
-
+print ingredient name, then calories, protein, carbs, fats
 ```
 - static loadFromFile
 ```
