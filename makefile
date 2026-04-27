@@ -1,8 +1,11 @@
-macro: main.o
-	g++ main.o -o macro
+macro: main.o IngredientInfo.o
+	g++ main.o IngredientInfo.o -o macro
 
 main.o: main.cpp
 	g++ -c main.cpp
+
+IngredientInfo.o: IngredientInfo.cpp
+	g++ -c IngredientInfo.cpp
 
 run: macro
 	./macro
