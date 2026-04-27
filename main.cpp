@@ -8,15 +8,15 @@ int main() {
 		int user_menu;
 		std::cout<<
 			"Please select an option:\n"
-			"0) List all recipes\n"
+			"0) exit\n"
 			"1) Print a recipe \n"
 			"2) Add a recipe \n"
 			"3) Remove a recipe \n"
 			"4) Add an ingredient \n"
-			"5) exit\n";
+			"5) List all recipes\n";
 		std::cin >> user_menu;
 		if (user_menu == 0) {
-			std::cout << "RecipeBook --> listAll\n";
+			keepGoing = false;
 		} //end if 0
 		if (user_menu == 1 ) {
 			std::cout << "Recipe --> printSummary\n";
@@ -31,7 +31,7 @@ int main() {
 			std::cout << "RecipeBook --> createIngredientInfo\n";
 		} //end if 4
 		if (user_menu == 5) {
-			keepGoing = false;
+			std::cout << "RecipeBook --> listAll\n";
 		} //end if 5
 
 
