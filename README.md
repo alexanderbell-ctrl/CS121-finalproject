@@ -14,36 +14,41 @@ The project will be made up of 4 classes: Ingredient, IngredientInfo, Recipe, an
 - IngredientInfo Done
 - Recipe Done
 - RecipeBook Done
+## Files & Formats
+- ingredients.csv
+Name, Calories, Protein, Carbs, Fats
+- recipebook.csv
+RecipeName, Ingredient1Name, amount1, Ingredient2Name, amount2
 ## UML
 ``` mermaid
 classDiagram
 
 class RecipeBook {
     -recipes : vector~Recipe~
-    +addRecipe()
+    +addRecipe(Recipe)
+	+removeRecipe(name : string)
     -createRecipe() Recipe
-    +findRecipe(name : string) Recipe
+	-createIngredientInfo(): IngredientInfo
+    +findRecipe(name : string) Recipe*
     +listAll() void
-    +totalCalories() double
+    -saveToFile() void
+	-loadFromFile() void
+	-loadIngredients() void
+	-saveIngredient(info: IngredientInfo) void
+	+menu() void
 }
 
 class Recipe {
     -name : string
-    -ingredients : vector~Ingredient~
-    +addIngredient(Ingredient) void
+    -ingredients : map ~IngredientInfo, double~ (info, grams)
+    +addIngredient(IngredientInfo, grams) void
     +removeIngredient(name : string) void
     +getTotalCalories() double
     +getTotalProtein() double
     +getTotalCarbs() double
     +getTotalFats() double
     +printSummary() void
-}
-
-class Ingredient {
-    -info : IngredientInfo
-    -quantity : double
-    +getMacros() tuple
-    +scaledCalories() double
+	+getName() string
 }
 
 class IngredientInfo {
@@ -56,6 +61,8 @@ class IngredientInfo {
     +getProtein() double
     +getCarbs() double
     +getFats() double
+	+printValues() void
+	+static loadFromFile
 }
 
 RecipeBook --> Recipe
