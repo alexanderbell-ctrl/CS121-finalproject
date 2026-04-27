@@ -66,6 +66,71 @@ class IngredientInfo {
 }
 
 RecipeBook --> Recipe
-Recipe --> Ingredient
-Ingredient --> IngredientInfo
+Recipe --> IngredientInfo
+```
+
+## Algorithms
+
+### RecipeBook
+- addRecipe(Recipe name)
+```
+
+```
+- removeRecipe(Recipe name)
+```
+
+```
+- createRecipe() instance of Recipe
+```
+
+```
+- createIngredientInfo() instance of IngredientInfo
+```
+
+```
+- findRecipe(name:string) Recipe*
+```
+
+```
+- listAll()
+```
+
+```
+- saveToFile()
+```
+
+```
+- loadFromFile()
+```
+
+```
+- loadIngredients()
+```
+
+```
+- saveIngredient(IngredientInfo)
+```
+
+```
+### Recipe
+- addIngredient(ingredient:string, grams:double)
+```
+
+```
+- removeIngredient(ingredient:string)
+```
+
+```
+### IngredientInfo
+- getCalories/Protein/Carbs/Fats 
+```
+
+```
+- printValues
+```
+
+```
+- static loadFromFile
+```
+
 ```
