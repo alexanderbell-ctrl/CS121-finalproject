@@ -29,50 +29,50 @@ std::string Recipe::getName() {
 	return name;
 } //end getName
 
-double Recipe getTotalCalories() {
+double Recipe::getTotalCalories() {
 	double total = 0;
 
 	for(const auto& keyValue : ingredientsList) {
-		std::string name = keyvalue.first;
-		double mass = keyvalue.second;
+		std::string name = keyValue.first;
+		double mass = keyValue.second;
 
-		IngredientsInfo info = ingredientDatabase[name];
+		IngredientInfo info = ingredientDatabase[name];
 		total += info.getCalories() * (mass/100.0);
 	} //end for
 	return total;
 } //end getTotalCalories
-double Recipe getTotalProtein() {
+double Recipe::getTotalProtein() {
 	double total = 0;
 
 	for(const auto& keyValue : ingredientsList) {
-		std::string name = keyvalue.first;
-		double mass = keyvalue.second;
+		std::string name = keyValue.first;
+		double mass = keyValue.second;
 
-		IngredientsInfo info = ingredientDatabase[name];
+		IngredientInfo info = ingredientDatabase[name];
 		total += info.getProtein() * (mass/100.0);
 	} //end for
 	return total;
 } //end getTotalProtein
-double Recipe getTotalCarbs() {
+double Recipe::getTotalCarbs() {
 	double total = 0;
 
 	for(const auto& keyValue : ingredientsList) {
-		std::string name = keyvalue.first;
-		double mass = keyvalue.second;
+		std::string name = keyValue.first;
+		double mass = keyValue.second;
 
-		IngredientsInfo info = ingredientDatabase[name];
+		IngredientInfo info = ingredientDatabase[name];
 		total += info.getCarbs() * (mass/100.0);
 	} //end for
 	return total;
 } //end getTotalCarbs
-double Recipe getTotalFats() {
+double Recipe::getTotalFats() {
 	double total = 0;
 
 	for(const auto& keyValue : ingredientsList) {
-		std::string name = keyvalue.first;
-		double mass = keyvalue.second;
+		std::string name = keyValue.first;
+		double mass = keyValue.second;
 
-		IngredientsInfo info = ingredientDatabase[name];
+		IngredientInfo info = ingredientDatabase[name];
 		total += info.getFats() * (mass/100.0);
 	} //end for
 	return total;

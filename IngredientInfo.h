@@ -1,5 +1,5 @@
-#ifndef ADDRESS_H_EXISTS
-#define ADDRESS_H_EXISTS
+#ifndef INGREDIENT_H_EXISTS
+#define INGREDIENT_H_EXISTS
 
 #include <iostream>
 #include <string>
