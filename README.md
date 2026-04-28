@@ -113,13 +113,37 @@ Recipe --> IngredientInfo
 
 ```
 ### Recipe
-- addIngredient(ingredient:string, grams:double)
+- addIngredient(ingredient:string, mass:double)
 ```
-
+    ingredientsList[ingredient] = mass #add the key-value pair to the map called ingredientsList
 ```
 - removeIngredient(ingredient:string)
 ```
+    remove ingredient from ingredientsList
+```
+- addIngredientInfo(std::string name)
+```
+    add name to ingredientDatabase and map to corresponding values from IngredientInfo class instance
+```
+- getTotalCalories() #mimic for the other getTotals
+```
+double total = 0
 
+for (each item in ingredientsList):
+    name = pair.first
+    mass = pair.second
+
+    if name in ingredientDatabase
+
+    new instance of IngredientInfo (info) = ingredientDatabase[name]
+
+    total += info.getCalories() * (mass/100.0)
+        
+    return total
+```
+- printSummary()
+```
+print ingredient names and masses, then total calories, total protein, total carbs, total fats
 ```
 ### IngredientInfo
 - getCalories/Protein/Carbs/Fats 

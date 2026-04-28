@@ -12,11 +12,11 @@ IngredientInfo::IngredientInfo() {
 } //end constructor
  
 void IngredientInfo::init(std::string name, double calories, double protein, double carbs, double fats) {
-	name = name;
-	calories = calories;
-	protein = protein;
-	carbs = carbs;
-	fats = fats;
+	this->name = name;
+	this->calories = calories;
+	this->protein = protein;
+	this->carbs = carbs;
+	this->fats = fats;
 } //end init
 
 double IngredientInfo::getCalories() {
