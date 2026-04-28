@@ -71,47 +71,6 @@ Recipe --> IngredientInfo
 
 ## Algorithms
 
-### RecipeBook
-- addRecipe(Recipe name)
-```
-
-```
-- removeRecipe(Recipe name)
-```
-
-```
-- createRecipe() instance of Recipe
-```
-
-```
-- createIngredientInfo() instance of IngredientInfo
-```
-
-```
-- findRecipe(name:string) Recipe*
-```
-
-```
-- listAll()
-```
-
-```
-- saveToFile()
-```
-
-```
-- loadFromFile()
-```
-
-```
-- loadIngredients()
-```
-
-```
-- saveIngredient(IngredientInfo)
-```
-
-```
 ### Recipe
 - addIngredient(ingredient:string, mass:double)
 ```
